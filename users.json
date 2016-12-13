@@ -1,0 +1,17 @@
+{
+    "user1": {
+        "msg": "haii"
+    },
+    "user2": {
+        "msg": "hello"
+       },
+     "user3": {
+        "msg": "how r u"
+       },
+      "user4": {
+        "msg": "fyn"
+       },
+      "user5": {
+        "msg": "Bye"
+       }
+}

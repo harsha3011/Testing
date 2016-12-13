@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style type="text/css">
+		li a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+<!--<button onclick="#" onclick="displayData()">User1</button>
+<button onclick="#" onclick="displayData()">User2</button>-->
+<ul>
+	<li>
+		<a href="#" onclick="displayData(1)">1</a>
+		<span id="1"></span>
+	</li>
+	<li>
+		<a href="#" onclick="displayData(2)">2</a>
+		<span id="2">
+		</span>
+	</li>
+	<li>
+		<a href="#" onclick="displayData(3)">3</a>
+		<span id="3">
+		</span>
+	</li>
+	<li>
+		<a href="#" onclick="displayData(4)">4</a>
+		<span id="4">
+		</span>
+	</li>
+	<li>
+		<a href="#" onclick="displayData(5)">5</a>
+		<span id="5">
+		</span>
+	</li>
+</ul>
+<script type="text/javascript">
+	function displayData(num){
+		window.setTimeout(function(){
+			var $t=$('#'+num);
+			$t.empty();
+			$.ajax({
+				type:'GET',
+				url : 'http://localhost:3000/user'+num,
+				success:function(data){
+					$t.append(data.msg);
+				}
+			});
+		},5000);
+	}
+</script>
+</body>
+</html>
